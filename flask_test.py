@@ -61,7 +61,14 @@ def handle_message(event):
 	#me: Uc242d41d19caa48431e682b73c08588e
 	profile = line_bot_api.get_profile( "Uc242d41d19caa48431e682b73c08588e")
 	print(profile)
-	print(str(profile))
+	try:
+		print(profile.displayName)
+		print(1)
+	except:
+		try:
+			print(profile['displayName'])
+			print(2)
+		except:
 	if event.source.type == "user":
 		if "/search" in event.message.text:
 			message = event.message.text.replace("/search ","")
