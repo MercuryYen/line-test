@@ -69,6 +69,7 @@ def handle_message(event):
 			print(profile['displayName'])
 			print(2)
 		except:
+			print(3)
 	if event.source.type == "user":
 		if "/search" in event.message.text:
 			message = event.message.text.replace("/search ","")
