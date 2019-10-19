@@ -59,6 +59,7 @@ def callback():
 def handle_message(event):
 	#groupID : C46e2f91c1f9392323e5562687abbbf0a
 	#me: Uc242d41d19caa48431e682b73c08588e
+	print(event)
 	if event.source.type == "user":
 		if "/search" in event.message.text:
 			message = event.message.text.replace("/search ","")
