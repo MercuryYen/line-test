@@ -57,9 +57,10 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-	#groupID : C46e2f91c1f9392323e5562687abbbf0a
+	#groupID : C76178d58e6e2e0180b7cb82c060125cc
 	#me: Uc242d41d19caa48431e682b73c08588e
-	print(event)
+	profile = line_bot_api.get_group_member_profile("C76178d58e6e2e0180b7cb82c060125cc", "Uc242d41d19caa48431e682b73c08588e")
+	print(profile)
 	if event.source.type == "user":
 		if "/search" in event.message.text:
 			message = event.message.text.replace("/search ","")
